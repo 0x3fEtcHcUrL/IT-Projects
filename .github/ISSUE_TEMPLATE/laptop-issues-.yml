@@ -1,9 +1,9 @@
 ---
 name: Laptop Issues
-about: Describe your problem here
+about: Describe your problem here.
 title: '"[Issues]: "'
 projects: ["0x3fEtcHcUrL/IT-Projects"]
-type: bug
+type: report
 body:
   - type: markdown
     attributes:
