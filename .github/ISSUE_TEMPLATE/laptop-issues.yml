@@ -100,11 +100,3 @@ body:
           required: true
         - label: I understand that sensitive data (like passwords) should not be included.
           required: true
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow this project's Code of Conduct.
-      options:
-        - label: I agree to follow this project's Code of Conduct.
-          required: true
