@@ -1,22 +1,25 @@
----
 name: Laptop Issues
-about: "Describe your problem here."
-title: '"[Issues]: "'
+description: Descript you problem here.
+title: "[Issues]: "
 projects: ["0x3fEtcHcUrL/IT-Projects"]
-type: report
+type: bug
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for taking the time to report an issue!  
-        Please fill in all required fields below to help us resolve your case quickly.
+        Please fill in all required fields below to help us resolve your case quickly.  
+        
         Common issue categories include:
         - 💻 Laptop Trouble (hardware, boot, battery, etc.)
         - 🧠 Software Error (application bugs, license issues, etc.)
         - 🌐 Network Issue (Wi-Fi, VPN, DNS, etc.)
         - 🖨️ Peripheral Issue (printers, scanners, etc.)
+
         ⚠️ **Please avoid including any sensitive data such as passwords or personal credentials.**
+        
         **If your report is urgent, please also notify the IT Helpdesk directly after submitting this form.**
+
   - type: dropdown
     id: category
     attributes:
@@ -36,8 +39,12 @@ body:
       label: Device / Asset Tag
       description: Enter the affected device name or tag (e.g. LAP-1234).
       placeholder: LAP-1234
+      options:
+        - Fresh install
+        - Upgrade
+        - NA
     validations:
-      required: true
+      required: false
   - type: textarea
     id: details
     attributes:
@@ -50,17 +57,6 @@ body:
         - Wi-Fi disconnects randomly.
     validations:
       required: true
-  - type: textarea
-    id: steps
-    attributes:
-      label: Steps to Reproduce (if applicable)
-      description: List any steps that trigger the problem.
-      placeholder: |
-        1. Open the application
-        2. Click “Start”
-        3. Observe the error message
-    validations:
-      required: false
   - type: input
     id: reporter
     attributes:
@@ -105,7 +101,6 @@ body:
           required: true
         - label: I understand that sensitive data (like passwords) should not be included.
           required: true
-
   - type: checkboxes
     id: terms
     attributes:
