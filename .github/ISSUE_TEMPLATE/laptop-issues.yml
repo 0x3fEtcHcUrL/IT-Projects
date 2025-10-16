@@ -25,11 +25,11 @@ body:
       label: Category
       description: Select the type of issue you are reporting.
       options:
-        - 💻 Laptop Trouble
-        - 🧠 Software Error
-        - 🌐 Network Issue
-        - 🖨️ Peripheral Issue
-        - ⚙️ Other
+        - Laptop Trouble
+        - Software Error
+        - Network Issue
+        - Peripheral Issue
+        - Other
     validations:
       required: true
   - type: input
@@ -70,10 +70,10 @@ body:
       label: Priority
       description: How severe is the issue?
       options:
-        - 🔴 Critical (System unusable)
-        - 🟠 High (Work interruption)
-        - 🟡 Medium (Minor issue)
-        - 🟢 Low (Cosmetic or request)
+        - Critical (System unusable)
+        - High (Work interruption)
+        - Medium (Minor issue)
+        - Low (Cosmetic or request)
     validations:
       required: true
   - type: dropdown
