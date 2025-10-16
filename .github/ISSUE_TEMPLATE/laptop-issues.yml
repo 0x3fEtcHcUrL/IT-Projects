@@ -19,7 +19,6 @@ body:
         ⚠️ **Please avoid including any sensitive data such as passwords or personal credentials.**
         
         **If your report is urgent, please also notify the IT Helpdesk directly after submitting this form.**
-
   - type: dropdown
     id: category
     attributes:
