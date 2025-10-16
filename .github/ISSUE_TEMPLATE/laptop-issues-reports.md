@@ -1,0 +1,101 @@
+---
+name: Laptop Issues Reports
+about: Describe your problem here
+title: "[Issues]"
+labels: ''
+assignees: 0x3fEtcHcUrL
+
+---
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue!  
+        Please fill in all required fields below to help us resolve your case quickly.  
+
+        Common issue categories include:
+        - 💻 Laptop Trouble (hardware, boot, battery, etc.)
+        - 🧠 Software Error (application bugs, license issues, etc.)
+        - 🌐 Network Issue (Wi-Fi, VPN, DNS, etc.)
+        - 🖨️ Peripheral Issue (printers, scanners, etc.)
+
+        ⚠️ **Please avoid including any sensitive data such as passwords or personal credentials.**
+        
+        **If your report is urgent, please also notify the IT Helpdesk directly after submitting this form.**
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Select the type of issue you are reporting.
+      options:
+        - 💻 Laptop Trouble
+        - 🧠 Software Error
+        - 🌐 Network Issue
+        - 🖨️ Peripheral Issue
+        - ⚙️ Other
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device / Asset Tag
+      description: Enter the affected device name or tag (e.g. LAP-1234).
+      placeholder: LAP-1234
+    validations:
+      required: false
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Issue Details
+      description: Describe what happened and what you expected to happen.
+      placeholder: |
+        Example:
+        - Laptop won’t start after pressing the power button.
+        - Software throws an error when opening files.
+        - Wi-Fi disconnects randomly.
+    validations:
+      required: true
+
+  - type: input
+    id: reporter
+    attributes:
+      label: Reported By
+      description: Your full name or company email
+      placeholder: John Doe / john@company.com
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How severe is the issue?
+      options:
+        - 🔴 Critical (System unusable)
+        - 🟠 High (Work interruption)
+        - 🟡 Medium (Minor issue)
+        - 🟢 Low (Cosmetic or request)
+    validations:
+      required: true
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots or Logs (optional)
+      description: Attach screenshots, logs, or relevant files. Drag and drop them here or paste image links.
+      placeholder: Paste or attach images here.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      description: Please confirm before submitting.
+      options:
+        - label: I have checked that this issue is not already reported.
+          required: true
+        - label: I understand that sensitive data (like passwords) should not be included.
+          required: true
