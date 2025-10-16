@@ -45,7 +45,7 @@ body:
       description: Enter the affected device name or tag (e.g. LAP-1234).
       placeholder: LAP-1234
     validations:
-      required: false
+      required: true
 
   - type: textarea
     id: details
