@@ -3,7 +3,6 @@ description: Describe your problem here.
 title: "[Issues]: "
 projects: ["0x3fEtcHcUrL/IT-Projects"]
 type: bug
-
 body:
   - type: markdown
     attributes:
@@ -20,7 +19,6 @@ body:
         ⚠️ **Please avoid including any sensitive data such as passwords or personal credentials.**
         
         **If your report is urgent, please also notify the IT Helpdesk directly after submitting this form.**
-
   - type: dropdown
     id: category
     attributes:
@@ -34,7 +32,6 @@ body:
         - ⚙️ Other
     validations:
       required: true
-
   - type: input
     id: device
     attributes:
@@ -43,7 +40,6 @@ body:
       placeholder: LAP-1234
     validations:
       required: false
-
   - type: textarea
     id: details
     attributes:
@@ -56,7 +52,6 @@ body:
         - Wi-Fi disconnects randomly.
     validations:
       required: true
-
   - type: input
     id: reporter
     attributes:
@@ -65,7 +60,6 @@ body:
       placeholder: John Doe / john@company.com
     validations:
       required: true
-
   - type: dropdown
     id: priority
     attributes:
@@ -78,7 +72,6 @@ body:
         - 🟢 Low (Cosmetic or request)
     validations:
       required: true
-
   - type: dropdown
     id: recurrence
     attributes:
@@ -87,14 +80,12 @@ body:
         - Yes, this is recurring
         - No, first time
         - Not sure
-
   - type: textarea
     id: attachments
     attributes:
       label: Screenshots or Logs (optional)
       description: Attach screenshots, logs, or relevant files. Drag and drop them here or paste image links.
       placeholder: Paste or attach images here.
-
   - type: checkboxes
     id: confirmation
     attributes:
