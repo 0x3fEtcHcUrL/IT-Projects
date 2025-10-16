@@ -1,38 +1,101 @@
----
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+name: Laptop Issues Records
+description: Describe your problem here.
+title: "[Issues]: "
+projects:
+  - 0x3fEtcHcUrL/IT-Projects
+labels:
+  - laptop-issue
+type: bug
 
----
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue!  
+        Please fill in all required fields below to help us resolve your case quickly.  
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+        Common issue categories include:
+        - 💻 Laptop Trouble (hardware, boot, battery, etc.)
+        - 🧠 Software Error (application bugs, license issues, etc.)
+        - 🌐 Network Issue (Wi-Fi, VPN, DNS, etc.)
+        - 🖨️ Peripheral Issue (printers, scanners, etc.)
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+        ⚠️ **Please avoid including any sensitive data such as passwords or personal credentials.**
+        
+        **If your report is urgent, please also notify the IT Helpdesk directly after submitting this form.**
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Select the type of issue you are reporting.
+      options:
+        - 💻 Laptop Trouble
+        - 🧠 Software Error
+        - 🌐 Network Issue
+        - 🖨️ Peripheral Issue
+        - ⚙️ Other
+    validations:
+      required: true
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+  - type: input
+    id: device
+    attributes:
+      label: Device / Asset Tag
+      description: Enter the affected device name or tag (e.g. LAP-1234).
+      placeholder: LAP-1234
+    validations:
+      required: false
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+  - type: textarea
+    id: details
+    attributes:
+      label: Issue Details
+      description: Describe what happened and what you expected to happen.
+      placeholder: |
+        Example:
+        - Laptop won’t start after pressing the power button.
+        - Software throws an error when opening files.
+        - Wi-Fi disconnects randomly.
+    validations:
+      required: true
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+  - type: input
+    id: reporter
+    attributes:
+      label: Reported By
+      description: Your full name or company email
+      placeholder: John Doe / john@company.com
+    validations:
+      required: true
 
-**Additional context**
-Add any other context about the problem here.
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How severe is the issue?
+      options:
+        - 🔴 Critical (System unusable)
+        - 🟠 High (Work interruption)
+        - 🟡 Medium (Minor issue)
+        - 🟢 Low (Cosmetic or request)
+    validations:
+      required: true
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots or Logs (optional)
+      description: Attach screenshots, logs, or relevant files. Drag and drop them here or paste image links.
+      placeholder: Paste or attach images here.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      description: Please confirm before submitting.
+      options:
+        - label: I have checked that this issue is not already reported.
+          required: true
+        - label: I understand that sensitive data (like passwords) should not be included.
+          required: true
