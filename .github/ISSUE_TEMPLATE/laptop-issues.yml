@@ -1,8 +1,9 @@
 name: Laptop Issues Records
-description: Descript you problem here.
+description: Describe your problem here.
 title: "[Issues]: "
 projects: ["0x3fEtcHcUrL/IT-Projects"]
 type: bug
+
 body:
   - type: markdown
     attributes:
@@ -19,31 +20,30 @@ body:
         ⚠️ **Please avoid including any sensitive data such as passwords or personal credentials.**
         
         **If your report is urgent, please also notify the IT Helpdesk directly after submitting this form.**
+
   - type: dropdown
     id: category
     attributes:
       label: Category
       description: Select the type of issue you are reporting.
       options:
-        - Laptop Trouble
-        - Software Error
-        - Network Issue
-        - Peripheral Issue
-        - Other
+        - 💻 Laptop Trouble
+        - 🧠 Software Error
+        - 🌐 Network Issue
+        - 🖨️ Peripheral Issue
+        - ⚙️ Other
     validations:
       required: true
+
   - type: input
     id: device
     attributes:
       label: Device / Asset Tag
       description: Enter the affected device name or tag (e.g. LAP-1234).
       placeholder: LAP-1234
-      options:
-        - Fresh install
-        - Upgrade
-        - NA
     validations:
       required: false
+
   - type: textarea
     id: details
     attributes:
@@ -56,6 +56,7 @@ body:
         - Wi-Fi disconnects randomly.
     validations:
       required: true
+
   - type: input
     id: reporter
     attributes:
@@ -64,18 +65,20 @@ body:
       placeholder: John Doe / john@company.com
     validations:
       required: true
+
   - type: dropdown
     id: priority
     attributes:
       label: Priority
       description: How severe is the issue?
       options:
-        - Critical (System unusable)
-        - High (Work interruption)
-        - Medium (Minor issue)
-        - Low (Cosmetic or request)
+        - 🔴 Critical (System unusable)
+        - 🟠 High (Work interruption)
+        - 🟡 Medium (Minor issue)
+        - 🟢 Low (Cosmetic or request)
     validations:
       required: true
+
   - type: dropdown
     id: recurrence
     attributes:
@@ -84,12 +87,14 @@ body:
         - Yes, this is recurring
         - No, first time
         - Not sure
+
   - type: textarea
     id: attachments
     attributes:
       label: Screenshots or Logs (optional)
       description: Attach screenshots, logs, or relevant files. Drag and drop them here or paste image links.
       placeholder: Paste or attach images here.
+
   - type: checkboxes
     id: confirmation
     attributes:
